@@ -31,6 +31,8 @@ public class RefreshHeaderControl: RefreshEventControl {
             } else if -h >= offsetY {
                 self.pulling(percent: 1.0)
                 self.updateEvent(.complete)
+            } else {
+                self.scrollViewDidRestorePosotion()
             }
         } else {
             switch self.event {
